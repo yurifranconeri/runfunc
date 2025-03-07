@@ -3,3 +3,6 @@ steps:
   name: 'gcr.io/cloud-builders/gcloud'
   entrypoint: 'gcloud'
   args: ['run', 'deploy', 'python-http-function', '--source', '.', '--function', 'hello_get', '--base-image', 'python312', '--region us-central1', '--allow-unauthenticated']
+
+options:
+  logging: CLOUD_LOGGING_ONLY
