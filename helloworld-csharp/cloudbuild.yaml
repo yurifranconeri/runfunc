@@ -1,0 +1,8 @@
+steps:
+- id: 'deploy run'
+  name: 'gcr.io/cloud-builders/gcloud'
+  entrypoint: 'gcloud'
+  args: ['run', 'deploy', 'dotnet-http-function', '--source', '.', '--function', 'hello_get_dot', '--base-image', 'dotnet8', '--region', 'us-central1', '--allow-unauthenticated']
+
+options:
+  logging: CLOUD_LOGGING_ONLY
